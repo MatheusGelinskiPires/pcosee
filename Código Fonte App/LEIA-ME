@@ -1,0 +1,47 @@
+# PCOSEE
+
+O Prêmio Ozires Silva de Empreendedorismo Sustentável é uma forma de reconhecer as instituições que contribuem para estimular as práticas de inovação e criatividade, sendo um meio de propagar e compartilhar as melhores práticas entre as organizações. A participação de um Prêmio de Educação Empreendedora é benéfica tanto para a instituição quanto para a sociedade. Estimulando a busca da melhoria contínua e contribuição para a instituição atraindo profissionais de qualidade, resultando no crescimento por procura de vagas na instituição vencedora.
+
+O Prêmio tem o propósito de certificar as Instituições de Ensino Médio, na cidade de Curitiba, que promovam ações, que incentivem práticas empreendedoras aos alunos matriculados, do primeiro ao terceiro ano do ensino médio.
+
+===== Instruções de Instalação =====
+
+O sistema foi homologado de acordo com os seguintes requerimentos:
+
+Servidor de Aplicação WildFly 10.0.0.Final
+Windows 10 10.0, 4 Processors
+Java HotSpot(TM) 64-Bit Server VM 1.8
+MongoDB 3.6
+
+===== Configuração de Aplicação =====
+
+É possível configurar um arquivo intituilado "application.properties" no classpath do servidor de aplicação com as seguintes configurações:
+
+app.nome=PCOSEE
+#MongoDB
+mongo.user={USUARIO MONGODB}
+mongo.pass={SENHA MONGODB}
+mongo.host={SERVIDOR MONGODB}
+mongo.port={PORTA SERVIDOR MONGODB}
+mongo.database=pcosee
+mongo.maxWaitTime=1000
+mongo.socketTimeout=1000
+mongo.connectTimeout=1000
+#Mail
+mail.host={SMTP}
+mail.port={SMTP PORTA}
+mail.user={USUARIO}
+mail.pass={SENHA}
+mail.protocol=smtp
+mail.auth=false
+mail.ssl=true
+mail.debug=false
+#Cache
+cache.name=Token
+cache.expiration=300000
+cache.heap=1000
+
+===== Contexto da Aplicação =====
+
+A aplicação possui um contexto igual a PCOSEE
+

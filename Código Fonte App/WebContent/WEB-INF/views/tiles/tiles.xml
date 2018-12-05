@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Anônimo -->
+
+    <!-- Layout -->
+    <definition name="anonimo" template="/WEB-INF/views/tiles/layouts/anonimoLayout.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/tiles/template/allCommon.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/template/anonimoMenu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/template/allFooter.jsp" />
+    </definition>
+	
+    <!-- Login -->
+    <definition name="index" extends="anonimo">
+        <put-attribute name="body" value="/WEB-INF/views/pages/index.jsp" />
+    </definition>
+    
+    <!-- Erro -->
+    <definition name="erro" extends="anonimo">
+        <put-attribute name="body" value="/WEB-INF/views/pages/erro.jsp" />
+    </definition>
+	
+    <!-- Esqueci a Senha -->
+    <definition name="esqueciASenha" extends="anonimo">
+        <put-attribute name="body" value="/WEB-INF/views/pages/esqueciASenha.jsp" />
+    </definition>
+	
+    <!-- Esqueci a Senha Token -->
+    <definition name="esqueciASenhaToken" extends="anonimo">
+        <put-attribute name="body" value="/WEB-INF/views/pages/esqueciASenhaToken.jsp" />
+    </definition>
+    
+    <!-- Sobre -->
+    <definition name="sobre" extends="anonimo">
+        <put-attribute name="body" value="/WEB-INF/views/pages/sobre.jsp" />
+    </definition>
+	
+    <!-- Fim Anônimo -->
+	
+    <!-- Administrador -->
+	
+    <!-- Layout -->
+    <definition name="administrador" template="/WEB-INF/views/tiles/layouts/administradorLayout.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/tiles/template/allCommon.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/template/administradorMenu.jsp" />
+        <put-attribute name="scripts" value="/WEB-INF/views/tiles/template/administradorScripts.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/template/allFooter.jsp"/>
+    </definition>
+    
+    <!-- Sobre Administrador -->
+    <definition name="/administrador/sobre" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/sobre.jsp" />
+    </definition>
+	
+    <!-- Dashboard Administrador -->
+    <definition name="/administrador/dashboard" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/dashboard.jsp" />
+    </definition>
+	
+    <!-- Dados Administrador -->
+    <definition name="/administrador/dados" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/dados.jsp" />
+    </definition>
+	
+    <!-- Administrador Funcionario List -->
+    <definition name="/administrador/funcionario/list" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/funcionario/list.jsp" />
+    </definition>
+	
+    <!-- Administrador Funcionario Get -->
+    <definition name="/administrador/funcionario/get" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/funcionario/get.jsp" />
+    </definition>
+	
+    <!-- Administrador Funcionario Add -->
+    <definition name="/administrador/funcionario/add" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/funcionario/add.jsp" />
+    </definition>
+	
+    <!-- Administrador Instituição List -->
+    <definition name="/administrador/instituicao/list" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/instituicao/list.jsp" />
+    </definition>
+	
+    <!-- Administrador Instituição Get -->
+    <definition name="/administrador/instituicao/get" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/instituicao/get.jsp" />
+    </definition>
+    
+    <!-- Administrador Instituição DocViewer -->
+    <definition name="/administrador/instituicao/docviewer" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/docviewer.jsp" />
+    </definition>
+	
+    <!-- Administrador Instituição Add -->
+    <definition name="/administrador/instituicao/add" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/instituicao/add.jsp" />
+    </definition>
+    
+    <!-- Administrador Período de Avaliação List -->
+    <definition name="/administrador/periodo/list" extends="administrador">
+        <put-attribute name="body" value="/WEB-INF/views/pages/administrador/periodo/list.jsp" />
+    </definition>
+	
+    <!-- Fim Administrador -->
+	
+    <!-- Auditor -->
+	
+    <!-- Layout -->
+    <definition name="auditor" template="/WEB-INF/views/tiles/layouts/auditorLayout.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/tiles/template/allCommon.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/template/auditorMenu.jsp" />
+        <put-attribute name="scripts" value="/WEB-INF/views/tiles/template/auditorScripts.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/template/allFooter.jsp" />
+    </definition>
+    
+    <!-- Sobre Auditor -->
+    <definition name="/auditor/sobre" extends="auditor">
+        <put-attribute name="body" value="/WEB-INF/views/pages/sobre.jsp" />
+    </definition>
+	
+    <!-- Auditor Dashboard -->
+    <definition name="/auditor/dashboard" extends="auditor">
+        <put-attribute name="body" value="/WEB-INF/views/pages/auditor/dashboard.jsp" />
+    </definition>
+	
+    <!-- Auditor Dados -->
+    <definition name="/auditor/dados" extends="auditor">
+        <put-attribute name="body" value="/WEB-INF/views/pages/auditor/dados.jsp" />
+    </definition>
+	
+    <!-- Auditor Avaliação Dissertativa List -->
+    <definition name="/auditor/avaliacao/dissertativa/list" extends="auditor">
+        <put-attribute name="body" value="/WEB-INF/views/pages/auditor/avaliacao/dissertativa/list.jsp" />
+    </definition>
+    
+    <!-- Auditor Avaliação Dissertativa Audit -->
+    <definition name="/auditor/avaliacao/dissertativa/audit" extends="auditor">
+        <put-attribute name="body" value="/WEB-INF/views/pages/auditor/avaliacao/dissertativa/audit.jsp" />
+    </definition>
+    
+    <!-- Auditor Avaliação Dissertativa DocViewer -->
+    <definition name="/auditor/avaliacao/dissertativa/docviewer" extends="auditor">
+        <put-attribute name="body" value="/WEB-INF/views/pages/docviewer.jsp" />
+    </definition>
+	
+    <!-- Fim Auditor -->
+	
+    <!-- Instituicao -->
+	
+    <!-- Layout -->
+    <definition name="instituicao" template="/WEB-INF/views/tiles/layouts/instituicaoLayout.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/tiles/template/allCommon.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/template/instituicaoMenu.jsp" />
+        <put-attribute name="scripts" value="/WEB-INF/views/tiles/template/instituicaoScripts.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/template/allFooter.jsp" />
+    </definition>
+	
+    <!-- Sobre Instituicao -->
+    <definition name="/instituicao/sobre" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/sobre.jsp" />
+    </definition>    
+        
+    <!-- Instituicao Dashboard -->
+    <definition name="/instituicao/dashboard" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/dashboard.jsp" />
+    </definition>
+    
+    <!-- Instituicao DocViewer -->
+    <definition name="/instituicao/docviewer" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/docviewer.jsp" />
+    </definition>
+    
+    <!-- Instituicao DocViewer -->
+    <definition name="/instituicao/avaliacao/dissertativa/docviewer" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/docviewer.jsp" />
+    </definition>
+	
+    <!-- Instituicao Dados -->
+    <definition name="/instituicao/dados" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/dados.jsp" />
+    </definition>
+	
+    <!-- Instituicao Representante Dados -->
+    <definition name="/instituicao/representante/dados" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/representanteDados.jsp" />
+    </definition>
+	
+    <!-- Instituicao Avaliação Objetiva List -->
+    <definition name="/instituicao/avaliacao/objetiva/list" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/avaliacao/objetiva/list.jsp" />
+    </definition>
+	
+    <!-- Instituicao Avaliação Objetiva Add -->
+    <definition name="/instituicao/avaliacao/objetiva/add" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/avaliacao/objetiva/add.jsp" />
+    </definition>
+	
+    <!-- Instituicao Avaliação Objetiva Get -->
+    <definition name="/instituicao/avaliacao/objetiva/get" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/avaliacao/objetiva/get.jsp" />
+    </definition>
+    
+    <!-- Instituicao Avaliação Dissertativa List -->
+    <definition name="/instituicao/avaliacao/dissertativa/list" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/avaliacao/dissertativa/list.jsp" />
+    </definition>
+	
+    <!-- Instituicao Avaliação Dissertativa Add -->
+    <definition name="/instituicao/avaliacao/dissertativa/add" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/avaliacao/dissertativa/add.jsp" />
+    </definition>
+	
+    <!-- Instituicao Avaliação Dissertativa Get -->
+    <definition name="/instituicao/avaliacao/dissertativa/get" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/avaliacao/dissertativa/get.jsp" />
+    </definition>
+	
+    <!-- Instituicao Avaliação Dissertativa List -->
+    <definition name="/instituicao/avaliacao/dissertativa/list" extends="instituicao">
+        <put-attribute name="body" value="/WEB-INF/views/pages/instituicao/avaliacao/dissertativa/list.jsp" />
+    </definition>
+	
+    <!-- Fim Instituicao -->
+
+</tiles-definitions>
